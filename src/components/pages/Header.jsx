@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 const header = () => {
   return (
     <header>
@@ -10,13 +12,16 @@ const header = () => {
             <i className="fa-solid fa-bars"></i>
         </label>
         <ul className="nav-menu">
-            <li className="active"><a href="/">Inicio</a></li>
-            <li><a href="/nosotros">Nosotros</a></li>
-            <li><a href="/catalogo">Catalogo</a></li>
-            <li><a className="contact" href="/contacto">Contactar</a></li>
+
+        
+            <li className="active"><NavLink to={"/"}>Inicio</NavLink></li>
+        
+            <li><NavLink to={"/nosotros"}>Nosotros</NavLink></li>
+            <li><NavLink to={"/catalogo"}>Catalogo</NavLink></li>
+            <li><NavLink className="contact" to={"/contacto"}>Contactar</NavLink></li>
         </ul>
         <div className="user-widget">
-          <a href="./cart"> <i className="fa-regular fa-user"></i></a>
+          <NavLink to={"./cart"}> <i className="fa-regular fa-user"></i></NavLink>
          </div>
        
         <div className="car-widget">
