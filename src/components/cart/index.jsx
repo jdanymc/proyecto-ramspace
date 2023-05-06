@@ -1,11 +1,13 @@
-import React from 'react'
+import PropType from 'prop-types'
+import { Link } from 'react-router-dom';
 
-const CarritoRapido = () => {
+const CarritoRapido = (props) => {
+  const {handleCarrito} = props;
   return (
     <section className="minicart">
     <div className="minicart__header">
       <h3 className="miniheader__titulo">Carrito</h3>
-      <p className="miniheader__cerrar"><i className="fa-solid fa-xmark"></i></p>
+      <p className="miniheader__cerrar" onClick={handleCarrito}><i className="fa-solid fa-xmark"></i></p>
     </div>
     <div className="minicart__producto">
       <div className="minicart__img">
@@ -36,10 +38,14 @@ const CarritoRapido = () => {
         <p className="total__texto">Total</p>
         <p className="total__precio">S/ 999.99</p>
       </div>
-      <a href="./cart.html" className="btn ">Comprar</a>
+      <Link to="/cart" className="btn" onClick={handleCarrito}>Comprar</Link>
     </div>
   </section>
   )
+}
+
+CarritoRapido.propTypes = {
+  handleCarrito: PropType.func.isRequired
 }
 
 export default CarritoRapido

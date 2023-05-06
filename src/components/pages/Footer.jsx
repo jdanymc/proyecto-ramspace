@@ -1,5 +1,3 @@
-import CarritoRapido from "../cart";
-
 const footer = () => {
   return (
     <>
@@ -32,9 +30,7 @@ const footer = () => {
           </div>
         </div>
       </footer>
-      <div id="modal">
-        <CarritoRapido />
-      </div>
+      
     </>
   );
 };
