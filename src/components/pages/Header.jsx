@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { NavLink } from "react-router-dom";
 import CarritoRapido from "../cart";
+import { UserContext } from "../context/ContextPage";
 
 const Header = () => {
   const [modalVisible, setModalVisible] = useState(false);
+  const { carrito } = useContext(UserContext);
 
   const handleCarrito = () => {
     setModalVisible(!modalVisible);
@@ -13,7 +15,7 @@ const Header = () => {
     <header>
       <nav>
         <div>
-          <img className="logo" src="./img/logo/logo_white.png" alt="logo" />
+          <img className="logo" src="/img/logo/logo_white.png" alt="logo" />
         </div>
         <input type="checkbox" id="check" />
         <label htmlFor="check" className="bar-btn">
@@ -48,7 +50,7 @@ const Header = () => {
             {" "}
             <i className="fa-solid fa-cart-shopping"></i>{" "}
           </p>
-          <p className="car-counter">1</p>
+          <p className="car-counter">{carrito.length}</p>
         </div>
       </nav>
       <div id="modal" style={{ right: modalVisible ? "0" : "-100vw" }}>
