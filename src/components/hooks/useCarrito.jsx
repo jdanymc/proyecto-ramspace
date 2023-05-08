@@ -1,12 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const useCarrito = () => {
   const [carrito, setCarrito] = useState(
-    // 1. valida ai hay algun producto en el carrito de lo contrario establece el valor de carrito e nun arrar vacio
     JSON.parse(localStorage.getItem("carrito")) || []
   );
   const agregarAlCarrito = (item, cantidad = 1) => {
-    //se desestructura la variable carrito para obtener sus valores
+    console.log(item);
+
     const copiaCarrito = [...carrito];
     const itemEncontrado = copiaCarrito.find((prod) => prod.id === item.id);
     if (itemEncontrado) {
@@ -18,14 +18,27 @@ const useCarrito = () => {
       nuevoItemAlCarrito.cant = +cantidad; // sele agrega a la propiedad cant el obeto nuevoitemcarrito el valor de 1
       copiaCarrito.push(nuevoItemAlCarrito); //se agrega el objeto nuevoItemCarrito usando push
       setCarrito(copiaCarrito);
+
     }
   };
   // esta funcion eliminara el item
   const eliminarDelCarrito = (id) => {
     const copiaCarrito = [...carrito];
     const nuevosProductos = copiaCarrito.filter((prod) => prod.id !== id);
-    setCarrito(nuevosProductos); // actualizar lista del carrito
+    setCarrito(nuevosProductos); 
+    if(carrito.length===0){
+      
+    }
   };
+  
+  const guardarCarrito = () => {
+    localStorage.setItem("carrito", JSON.stringify(carrito));
+  };
+
+  useEffect(() => {
+    guardarCarrito();
+  }, [carrito]);
+
   return {agregarAlCarrito, carrito, eliminarDelCarrito};
 };
 
