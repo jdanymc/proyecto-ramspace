@@ -251,11 +251,12 @@ nav {
 }
 /*------------------------------- fin Header-------------------------*/
 /*------------------------------- Carrusel---------------------------*/
-.d-block {
-  height: 500px;
-  width: auto;
+.carousel-inner{
+  width: fit-content;
+  height: fit-content;
 }
 /* ---------------------------fin de carrusel----------------------- */
+
 
 /* ------------------------productos destacados--------------------- */
 .prod-dest {
