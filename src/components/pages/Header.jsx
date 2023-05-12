@@ -4,6 +4,7 @@ const header = () => {
   return (
     <header>
     <nav>
+      <div className="items_menu">
         <div>
             <img className="logo" src="./img/logo/logo_white.png" alt="logo"/>
         </div>
@@ -20,12 +21,16 @@ const header = () => {
             <li><NavLink to={"/catalogo"}>Catalogo</NavLink></li>
             <li><NavLink className="contact" to={"/contacto"}>Contactar</NavLink></li>
         </ul>
+      </div>
+        <div className="items_usuario">
+        <div className="linea"></div>
         <div className="user-widget">
           <NavLink to={"./cart"}> <i className="fa-regular fa-user"></i></NavLink>
          </div>
-       
+         <div className="linea"></div>
         <div className="car-widget">
          <p> <i className="fa-solid fa-cart-shopping"></i> </p><p className="car-counter">1</p>
+        </div>
         </div>
     </nav>
 </header>
