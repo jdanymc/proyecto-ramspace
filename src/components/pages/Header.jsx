@@ -11,7 +11,8 @@ const Header = () => {
 }, [])
   return (
     <header>
-      <nav>
+    <nav>
+      <div className="items_menu">
         <div>
           <img className="logo" src="/img/logo/logo_white.png" alt="logo" />
         </div>
@@ -36,28 +37,18 @@ const Header = () => {
             </NavLink>
           </li>
         </ul>
+      </div>
+        <div className="items_usuario">
+        <div className="linea"></div>
         <div className="user-widget">
-          <NavLink to={"./cart"}>
-            {" "}
-            <i className="fa-regular fa-user"></i>
-          </NavLink>
+          <NavLink to={"./cart"}> <i className="fa-regular fa-user"></i></NavLink>
+         </div>
+         <div className="linea"></div>
+        <div className="car-widget">
+         <p> <i className="fa-solid fa-cart-shopping"></i> </p><p className="car-counter">1</p>
         </div>
-
-        <div
-          className="car-widget"
-          onClick={() => {
-            if (carrito.length > 0) {
-              handleCarrito();
-            }
-          }}
-        >
-          <p>
-            {" "}
-            <i className="fa-solid fa-cart-shopping"></i>{" "}
-          </p>
-          <p className="car-counter">{carrito.length}</p>
-        </div>
-      </nav>
+          </div>
+    </nav>
       <div tabIndex={0} ref={modalReference} id="modal" style={{ right: modalVisible ? "0" : "-100vw" }} onKeyUp={(e)=>{
         if(e.key==='Escape'){
           handleCarrito();

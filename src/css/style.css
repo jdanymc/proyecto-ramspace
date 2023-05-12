@@ -31,15 +31,26 @@ nav {
 }
 /* -----------------------------header------------------------------------- */
 .logo {
-  margin-top: 30px;
   width: 200px;
 }
 .bar-btn {
   font-size: 25px;
-  margin-right: 20px;
   cursor: pointer;
 }
-
+.items_usuario{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-right: 10px;
+}
+.items_menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
+  gap: 2px;
+}
 .nav-menu {
   position: fixed;
   width: 100%;
@@ -199,7 +210,7 @@ nav {
 }
 
 .user-widget {
-padding: 20px;
+padding: 5px;
 }
 
 .user-widget i{
@@ -381,7 +392,6 @@ text-align: center;
     background: none;
     transition: none;
     text-align: right;
-    margin-right: 50px;
   }
   .nav-menu li {
     display: inline-block;
@@ -421,5 +431,15 @@ text-align: center;
     }
     .dp__producto{
         flex-direction: column;
+    }
+    .linea{
+      margin-left: 8px;
+      margin-right:8px ;
+      height: 20px;
+      width: 2px;
+      background-color: #3a6d7c;
+    }
+    .logo{
+      width: 150px;
     }
 }
