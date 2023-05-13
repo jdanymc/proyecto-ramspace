@@ -14,3 +14,10 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+@media screen and (max-width: 728px) {
+    .product-description, .product-title{
+        font-size:0.8rem ;
+    }
+
+}

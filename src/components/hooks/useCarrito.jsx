@@ -5,7 +5,6 @@ const useCarrito = () => {
     JSON.parse(localStorage.getItem("carrito")) || []
   );
   const agregarAlCarrito = (item, cantidad = 1) => {
-    console.log(item);
 
     const copiaCarrito = [...carrito];
     const itemEncontrado = copiaCarrito.find((prod) => prod.id === item.id);
@@ -25,10 +24,8 @@ const useCarrito = () => {
   const eliminarDelCarrito = (id) => {
     const copiaCarrito = [...carrito];
     const nuevosProductos = copiaCarrito.filter((prod) => prod.id !== id);
-    setCarrito(nuevosProductos); 
-    if(carrito.length===0){
-      
-    }
+    setCarrito(nuevosProductos);     
+   
   };
   
   const guardarCarrito = () => {

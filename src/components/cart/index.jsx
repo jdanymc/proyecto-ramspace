@@ -1,13 +1,33 @@
-import PropType from "prop-types";
 import { Link } from "react-router-dom";
 import { UserContext } from "../context/ContextPage";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
+import Swal from "sweetalert2";
 //import './styles.css';
 
-const CarritoRapido = (props) => {
-  const { handleCarrito } = props;
-  const { agregarAlCarrito, carrito, eliminarDelCarrito } =
-    useContext(UserContext);
+const CarritoRapido = () => {
+  const {
+    agregarAlCarrito,
+    carrito,
+    eliminarDelCarrito,
+    handleCarrito,    
+  } = useContext(UserContext);
+
+  const [total, setTotal] = useState(0);
+
+  function calculaTotal(){
+    let total = 0;
+    carrito.map((item)=>{
+      total += item.price * item.cant;
+    })
+    return total;
+  }
+
+  useEffect(()=>{
+    setTotal(calculaTotal());
+    if (carrito.length  <= 0) {
+      handleCarrito();
+    }
+  },[carrito]);
 
   return (
     <section className="minicart">
@@ -32,7 +52,19 @@ const CarritoRapido = (props) => {
                 <div>
                   <i
                     className="fa-solid fa-trash-can"
-                    onClick={() => eliminarDelCarrito(item.id)}
+                    onClick={() => {
+                      Swal.fire({
+                        title: '¿Desea retirar el producto?',
+                        showCancelButton: true,
+                        confirmButtonText: 'Continuar',
+                        cancelButtonText: 'Cancelar',
+                      }).then((result) => {
+                        if (result.isConfirmed) {
+                          eliminarDelCarrito(item.id);
+                         
+                        }
+                      })
+                    }}
                   ></i>
                 </div>
               </div>
@@ -41,11 +73,9 @@ const CarritoRapido = (props) => {
                   <p className="total__cantidad">
                     <input
                       type="number"
-                      defaultValue={item.cant}
+                      value={item.cant}
                       name="cantidad"
-                      onChange={(e) =>
-                        agregarAlCarrito(item, +e.target.value - item.cant)
-                      }
+                      onChange={(e) => agregarAlCarrito(item, +e.target.value - item.cant) }
                       min="1"
                     />
                   </p>
@@ -60,9 +90,10 @@ const CarritoRapido = (props) => {
       </div>
 
       <div className="minicart__footer">
+        <hr />
         <div className="minifooter__total">
           <p className="total__texto">Total</p>
-          <p className="total__precio">S/ 999.99</p>
+          <p className="total__precio">S/ {total.toFixed(2)}</p>
         </div>
         <Link to="/cart" className="btn" onClick={handleCarrito}>
           Comprar
@@ -70,10 +101,6 @@ const CarritoRapido = (props) => {
       </div>
     </section>
   );
-};
-
-CarritoRapido.propTypes = {
-  handleCarrito: PropType.func.isRequired,
 };
 
 export default CarritoRapido;

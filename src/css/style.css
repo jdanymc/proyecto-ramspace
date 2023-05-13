@@ -108,9 +108,9 @@ nav {
     background-color: #f9f9f9 ;
     max-width: 500px;
     padding: 20px;
-    height: 100vw;
+    min-height: 100vh;
 }
-.minicart__header{
+    .minicart__header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -133,7 +133,7 @@ nav {
 
 .minicart__img img{
   object-fit: contain;
-  width: 100%;
+  width: 100px;
   height: 100%;
 }
 
@@ -149,6 +149,14 @@ nav {
 }
 .minicart__footer{
     padding: 50px;
+    float: right;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    background-color: #f5f5f5;
+    width: 480px;
+
+
 }
 .minicart__footer a{
     width: 100%;
@@ -186,6 +194,7 @@ nav {
   }
   
   .minicart__productos{
+
 
 }
 
@@ -396,6 +405,10 @@ text-align: center;
   }
 }
 @media screen and (max-width: 728px) {
+  .minicart__img img{
+    width: 50px;
+  }
+
   .d-block {
     height: 200px;
   }
