@@ -1,4 +1,4 @@
-import { useContext,useRef, useEffect } from "react";
+import { useContext,useRef} from "react";
 import { NavLink } from "react-router-dom";
 import CarritoRapido from "../cart";
 import { UserContext } from "../context/ContextPage";
@@ -6,9 +6,7 @@ import { UserContext } from "../context/ContextPage";
 const Header = () => {
   const { carrito, modalVisible, handleCarrito } = useContext(UserContext);
  const modalReference = useRef(null); 
- useEffect(() => {
-  modalReference.current.focus();
-}, [])
+
   return (
     <header>
     <nav>
@@ -63,6 +61,7 @@ const Header = () => {
       <div tabIndex={0} ref={modalReference} id="modal" style={{ right: modalVisible ? "0" : "-100vw" }} onKeyUp={(e)=>{
         if(e.key==='Escape'){
           handleCarrito();
+          modalReference.current.focus();
         }
       }}>
         <CarritoRapido />
