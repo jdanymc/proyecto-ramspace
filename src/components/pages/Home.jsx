@@ -8,7 +8,7 @@ const Home = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="./img/banner/Carrusel-1.jpg"
+              src="./img/banner/Carrusel-1.png"
               className="d-block w-100"
               alt="imagen1"
             />
@@ -22,7 +22,7 @@ const Home = () => {
           </div>
           <div className="carousel-item">
             <img
-              src="./img/banner/Carrusel-3.png"
+              src="./img/banner/Carrusel-3.jpg"
               className="d-block w-100"
               alt="imagen3"
             />
