@@ -1,4 +1,4 @@
-import nosotros from "../../css/nosotros.css";
+import "../../css/nosotros.css";
 
 const Nosotros = () => {
   return (
