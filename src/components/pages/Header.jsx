@@ -44,11 +44,22 @@ const Header = () => {
           <NavLink to={"./cart"}> <i className="fa-regular fa-user"></i></NavLink>
          </div>
          <div className="linea"></div>
-        <div className="car-widget">
-         <p> <i className="fa-solid fa-cart-shopping"></i> </p><p className="car-counter">1</p>
+         <div
+          className="car-widget"
+          onClick={() => {
+            if (carrito.length > 0) {
+              handleCarrito();
+            }
+          }}
+        >
+          <p>
+            {" "}
+            <i className="fa-solid fa-cart-shopping"></i>{" "}
+          </p>
+          <p className="car-counter">{carrito.length}</p>
         </div>
-          </div>
-    </nav>
+        </div>
+      </nav>
       <div tabIndex={0} ref={modalReference} id="modal" style={{ right: modalVisible ? "0" : "-100vw" }} onKeyUp={(e)=>{
         if(e.key==='Escape'){
           handleCarrito();
