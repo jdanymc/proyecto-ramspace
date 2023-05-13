@@ -74,11 +74,11 @@ nav {
 }
 .sb-nosotros {
   /* height: 500px; */
-  background-image: url(../html/img/img-nosotros/nosotros.png);
+  background-image: url(../../public/img/img-nosotros/nosotros.png);
   background-repeat: no-repeat;
   text-align: center;
   padding: 55px;
-  font-size: x-large;
+
 }
 .contain-p {
   padding: 20px 30px;
