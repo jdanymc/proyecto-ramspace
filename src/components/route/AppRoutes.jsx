@@ -7,6 +7,7 @@ import Cart from "../pages/Cart";
 import Catalogo from "../pages/Catalogo";
 import Nosotros from "../pages/Nosotros";
 import Contacto from "../pages/Contacto";
+import Login from "../pages/Login";
 
 const AppRoutes = () => {
   return (
@@ -18,6 +19,7 @@ const AppRoutes = () => {
         <Route path="catalogo" element={<Catalogo/>} />
         <Route path="nosotros" element={<Nosotros/>} />
         <Route path="contacto" element={<Contacto/>} />
+        <Route path="login" element={<Login/>} />
       </Routes>
       <Footer/>
     </BrowserRouter>
