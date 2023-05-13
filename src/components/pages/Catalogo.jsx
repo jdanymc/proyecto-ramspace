@@ -1,12 +1,10 @@
 import axios from "axios";
 import { URL_API_STORE } from "../../constants";
-import { useState, useEffect, useContext } from "react";
+import { useState, useEffect } from "react";
 import Product from "../product";
-import { UserContext } from "../context/ContextPage";
 import '../../css/gallery.css'
 
 const Catalogo = () => {
-  const { agregarAlCarrito } = useContext(UserContext);
   const [productos, setProductos] = useState([]);
 
 
@@ -28,7 +26,7 @@ const Catalogo = () => {
           {
             productos.map((producto) => (
               <div className="card" key={producto.id}>
-              <Product item={producto} agregarAlCarrito={agregarAlCarrito}/>
+              <Product item={producto} />
               </div>
             ))
           }

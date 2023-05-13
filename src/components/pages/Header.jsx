@@ -1,16 +1,14 @@
-import { useContext, useState } from "react";
+import { useContext,useRef, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import CarritoRapido from "../cart";
 import { UserContext } from "../context/ContextPage";
 
 const Header = () => {
-  const [modalVisible, setModalVisible] = useState(false);
-  const { carrito } = useContext(UserContext);
-
-  const handleCarrito = () => {
-    setModalVisible(!modalVisible);
-  };
-
+  const { carrito, modalVisible, handleCarrito } = useContext(UserContext);
+ const modalReference = useRef(null); 
+ useEffect(() => {
+  modalReference.current.focus();
+}, [])
   return (
     <header>
       <nav>
@@ -45,7 +43,14 @@ const Header = () => {
           </NavLink>
         </div>
 
-        <div className="car-widget" onClick={handleCarrito}>
+        <div
+          className="car-widget"
+          onClick={() => {
+            if (carrito.length > 0) {
+              handleCarrito();
+            }
+          }}
+        >
           <p>
             {" "}
             <i className="fa-solid fa-cart-shopping"></i>{" "}
@@ -53,8 +58,12 @@ const Header = () => {
           <p className="car-counter">{carrito.length}</p>
         </div>
       </nav>
-      <div id="modal" style={{ right: modalVisible ? "0" : "-100vw" }}>
-        <CarritoRapido handleCarrito={handleCarrito} />
+      <div tabIndex={0} ref={modalReference} id="modal" style={{ right: modalVisible ? "0" : "-100vw" }} onKeyUp={(e)=>{
+        if(e.key==='Escape'){
+          handleCarrito();
+        }
+      }}>
+        <CarritoRapido />
       </div>
     </header>
   );
