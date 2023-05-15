@@ -80,13 +80,16 @@ const CarritoRapido = () => {
                     />
                   </p>
                   <p className="total__precio">
-                    {(item.price * item.cant).toFixed(2)}
+                    S/ {(item.price * item.cant).toFixed(2)}
                   </p>
                 </div>
               </div>
             </div>
           </div>
         ))}
+        <div className="p-5">
+&nbsp;
+        </div>
       </div>
 
       <div className="minicart__footer">
