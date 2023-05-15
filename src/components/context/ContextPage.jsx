@@ -1,18 +1,33 @@
-import { createContext } from "react";
+import { createContext, useState } from "react";
 import useCarrito from "../hooks/useCarrito";
+import PropTypes from "prop-types";
 export const UserContext = createContext();
 
-//se crea un contexto para poder usar las funciones y variables del custom hooks useCarrito en todos los
-//componentes que esten dentro del componente contextCarrito
 export const ContextPage = ({ children }) => {
-  // se desestructura el custom hook para obtener las funciones y variables
+  const [modalVisible, setModalVisible] = useState(false);
   const { agregarAlCarrito, carrito, eliminarDelCarrito } = useCarrito();
+  
+  const handleCarrito = () => {
+    setModalVisible(!modalVisible);
+    document.body.style.overflow = !modalVisible ? "hidden" : "unset";
+  };
+
   return (
-    // se crea un contexto y un userContext que va contener las funciones que se van a usar
     <UserContext.Provider
-      value={{ agregarAlCarrito, carrito, eliminarDelCarrito }}
+      value={{
+        agregarAlCarrito,
+        carrito,
+        eliminarDelCarrito,
+        modalVisible,
+        handleCarrito,
+        setModalVisible
+      }}
     >
       {children}
     </UserContext.Provider>
   );
+};
+
+ContextPage.propTypes = {
+  children: PropTypes.node.isRequired,
 };
