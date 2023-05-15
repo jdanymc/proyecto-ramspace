@@ -16,11 +16,12 @@
     margin-right: auto;
     max-width: var(--width-desktop);
 
-    
 }
+
 header {
   width: 100%;
   height: 21vh;
+  margin-top: 25px;
 }
 nav {
   height: 100px;
@@ -31,7 +32,7 @@ nav {
 }
 /* -----------------------------header------------------------------------- */
 .logo {
-  width: 200px;
+  width: 250px;
 }
 .bar-btn {
   font-size: 25px;
@@ -155,6 +156,7 @@ nav {
     align-items: center;
 }
 
+
 #modal {
     background: rgba(0, 0, 0, 0.9);
     position: fixed;
@@ -267,6 +269,7 @@ text-align: center;
 .d-block {
   height: 500px;
   width: auto;
+  z-index: 0;
 }
 /* ---------------------------fin de carrusel----------------------- */
 
@@ -277,6 +280,11 @@ text-align: center;
 }
 .prod-title {
   margin-bottom: 20px;
+}
+.card-body{
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
 }
 
 /* -------------------Fin productos destados ------------------------*/
@@ -329,6 +337,9 @@ text-align: center;
     color: #fff;
         
   }
+  .jMc{
+    width: 30%;
+  }
   
 /*------------------------------- Fin footer-------------------------------- */
 
@@ -337,6 +348,7 @@ text-align: center;
 }
 #check:checked ~ .nav-menu {
   height: 100vh;
+  z-index: 1000;
 }
 #check:checked ~ .nav-menu li {
   display: block;
@@ -405,4 +417,11 @@ text-align: center;
     .logo{
       width: 150px;
     }
+    .cardsDest{
+      flex-direction: column;
+    }
+    .jMc{
+      width: 100%;
+    }
+  
 }

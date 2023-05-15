@@ -55,8 +55,8 @@ const Home = () => {
       </div>
       <div className="prod-dest">
         <h2 className="prod-title">Productos Destacados</h2>
-        <div className="d-flex align-content-between justify-content-center flex-wrap grid gap-3">
-          <div className="card w-25 p-3">
+        <div className="d-flex align-content-between justify-content-center flex-wrap gap-3 cardsDest">
+          <div className="card p-3 jMc">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -69,15 +69,15 @@ const Home = () => {
               </p>
             </div>
             <div className="card-body">
-              <a href="#" className="card-link">
+              <a href="#" className="btn btn-success">
                 Agregar al carrito
               </a>
-              <a href="#" className="card-link">
+              <a href="#" className="btn btn-warning">
                 $ Precio
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card p-3 jMc">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -90,15 +90,15 @@ const Home = () => {
               </p>
             </div>
             <div className="card-body">
-              <a href="#" className="card-link">
+              <a href="#" className="btn btn-success">
                 Agregar al carrito
               </a>
-              <a href="#" className="card-link">
+              <a href="#" className="btn btn-warning">
                 $ Precio
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card p-3 jMc">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -111,15 +111,15 @@ const Home = () => {
               </p>
             </div>
             <div className="card-body">
-              <a href="#" className="card-link">
+              <a href="#" className="btn btn-success">
                 Agregar al carrito
               </a>
-              <a href="#" className="card-link">
+              <a href="#" className="btn btn-warning">
                 $ Precio
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card p-3 jMc">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -132,15 +132,15 @@ const Home = () => {
               </p>
             </div>
             <div className="card-body">
-              <a href="#" className="card-link">
+              <a href="#" className="btn btn-success">
                 Agregar al carrito
               </a>
-              <a href="#" className="card-link">
+              <a href="#" className="btn btn-warning">
                 $ Precio
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card p-3 jMc">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -153,15 +153,15 @@ const Home = () => {
               </p>
             </div>
             <div className="card-body">
-              <a href="#" className="card-link">
+              <a href="#" className="btn btn-success">
                 Agregar al carrito
               </a>
-              <a href="#" className="card-link">
+              <a href="#" className="btn btn-warning">
                 $ Precio
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card p-3 jMc">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -174,10 +174,10 @@ const Home = () => {
               </p>
             </div>
             <div className="card-body">
-              <a href="#" className="card-link">
+              <a href="#" className="btn btn-success">
                 Agregar al carrito
               </a>
-              <a href="#" className="card-link">
+              <a href="#" className="btn btn-warning">
                 $ Precio
               </a>
             </div>
