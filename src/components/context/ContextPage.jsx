@@ -8,10 +8,10 @@ export const ContextPage = ({ children }) => {
   const { agregarAlCarrito, carrito, eliminarDelCarrito } = useCarrito();
 
   const handleCarrito = () => {
-    //if (carrito.length > 0) {
+    if (carrito.length > 0) {
       setModalVisible(!modalVisible);
       document.body.style.overflow = !modalVisible ? "hidden" : "unset";
-    //}
+    }
   };
 
   return (
