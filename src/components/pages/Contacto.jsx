@@ -1,9 +1,7 @@
-
-
 const Contacto = () => {
   return (
 <>
-    <main className="c-main">
+    <main className="c-main container-fluid">
       <h1 className="title_contain display-4 justify-content-center  p-4">
         Formulario de Contacto
       </h1>

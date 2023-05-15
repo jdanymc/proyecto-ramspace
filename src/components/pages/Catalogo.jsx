@@ -3,7 +3,7 @@ import { URL_API_STORE } from "../../constants";
 import { useState, useEffect, useContext } from "react";
 import Product from "../product";
 import { UserContext } from "../context/ContextPage";
-import '../../css/gallery.css'
+
 
 const Catalogo = () => {
   const { agregarAlCarrito } = useContext(UserContext);

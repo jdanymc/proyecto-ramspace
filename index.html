@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/2cb25f2c39.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="stylesheet" href="./src/css/style.css" />
-    <link href="img/logo/ico.ico" rel="icon" type="image/vnd.microsoft.icon" />
-    <title>RamSpace</title>
-  </head>
-  <body>
-    <div class="page">
-      <div id="root"></div>
-    </div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/2cb25f2c39.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/transition-style">
+  <link rel="stylesheet" href="./src/css/style.css" />
+  <link href="img/logo/ico.ico" rel="icon" type="image/vnd.microsoft.icon" />
+  <title>RamSpace</title>
+</head>
+
+<body class="body-web" transition-style="in:wipe:down">
+  <div class="page">
+    <div id="root"></div>
+  </div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script type="module" src="/src/menu.js"></script>
+</body>
+
 </html>

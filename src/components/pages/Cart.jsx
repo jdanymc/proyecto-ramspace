@@ -46,38 +46,7 @@ const Cart = () => {
                   <a href="#"><i className="fa-solid fa-trash-can"></i></a>
                 </div>
               </div>
-              <div className="detail__producto d-flex mt-2">
-                <div className="dp__producto d-flex">
-                  <div className="dp__producto_precio d-flex">
-                    <div className="dp__img d-flex">
-                      <div><a href="#">
-                        <img
-                          src="./img/img-componentes-pc/producto-referencial-ram.jpg"
-                          height="100"
-                          alt=""
-                        /></a>
-                      </div>
-                      <div>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing
-                        elit. Saepe sapiente, expedita et sunt ab esse dolorem
-                        impedit doloribus
-                      </div>
-                    </div>
-                    <div className="dp__precio">S/ 999.99</div>
-                  </div>
-                  <div className="dp__cantidad_subtotal d-flex">
-                    <div className="dp_cantidad d-flex">
-                      <div><a href="#"><i className="fa-solid fa-plus"></i></a></div>
-                      <div className="dp_cantidad_numero"><span>1</span></div>
-                      <div><a href="#"><i className="fa-solid fa-minus"></i></a></div>
-                    </div>
-                    <div className="dp_subtotal">S/ 999.99</div>
-                  </div>
-                </div>
-                <div className="dp__elimina">
-                  <a href="#"><i className="fa-solid fa-trash-can"></i></a>
-                </div>
-              </div>
+             
             </div>
           </div>
           <div className="tu__compra col-md-2">

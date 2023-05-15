@@ -1,5 +1,4 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle";
 
 const Home = () => {
   return (
@@ -8,11 +7,12 @@ const Home = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="./img/banner/Carrusel-1.png"
+              src="./img/banner/Carrusel-3.jpg"
               className="d-block w-100"
-              alt="imagen1"
+              alt="imagen3"
             />
           </div>
+
           <div className="carousel-item">
             <img
               src="./img/banner/Carrusel-2.jpg"
@@ -20,11 +20,11 @@ const Home = () => {
               alt="imagen2"
             />
           </div>
-          <div className="carousel-item">
+          <div className="carousel-item ">
             <img
-              src="./img/banner/Carrusel-3.jpg"
+              src="https://i.postimg.cc/mDdJwBLr/Carrusel-1.png"
               className="d-block w-100"
-              alt="imagen3"
+              alt="imagen1"
             />
           </div>
         </div>
@@ -53,10 +53,10 @@ const Home = () => {
           <span className="visually-hidden">Next</span>
         </button>
       </div>
-      <div className="prod-dest">
+      <div className="prod-dest ">
         <h2 className="prod-title">Productos Destacados</h2>
-        <div className="d-flex align-content-between justify-content-center flex-wrap grid gap-3">
-          <div className="card w-25 p-3">
+        <div className="d-flex container-fluid align-content-between justify-content-center flex-wrap grid gap-3">
+          <div className="card  p-3">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -77,7 +77,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card  p-3">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -98,7 +98,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card p-3">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -119,7 +119,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card p-3">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -140,7 +140,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card p-3">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -161,7 +161,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card p-3">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
