@@ -59,6 +59,7 @@ nav {
   transition: all 0.5s;
   padding: 0;
   margin: 0;
+  z-index: 999;
 }
 .nav-menu li {
   display: none;

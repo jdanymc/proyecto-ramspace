@@ -56,7 +56,7 @@ const Home = () => {
       <div className="prod-dest">
         <h2 className="prod-title">Productos Destacados</h2>
         <div className="d-flex align-content-between justify-content-center flex-wrap grid gap-3">
-          <div className="card w-25 p-3">
+          <div className="card  p-3">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -77,7 +77,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card  p-3">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -98,7 +98,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card  p-3">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -119,7 +119,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card  p-3">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -140,7 +140,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card  p-3">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
@@ -161,7 +161,7 @@ const Home = () => {
               </a>
             </div>
           </div>
-          <div className="card w-25 p-3">
+          <div className="card  p-3">
             <img
               src="./img/img-componentes-pc/producto-referencial-ram.jpg"
               className="card-img-top"
