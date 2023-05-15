@@ -6,10 +6,12 @@ export const UserContext = createContext();
 export const ContextPage = ({ children }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const { agregarAlCarrito, carrito, eliminarDelCarrito } = useCarrito();
-  
+
   const handleCarrito = () => {
-    setModalVisible(!modalVisible);
-    document.body.style.overflow = !modalVisible ? "hidden" : "unset";
+    //if (carrito.length > 0) {
+      setModalVisible(!modalVisible);
+      document.body.style.overflow = !modalVisible ? "hidden" : "unset";
+    //}
   };
 
   return (
@@ -20,7 +22,7 @@ export const ContextPage = ({ children }) => {
         eliminarDelCarrito,
         modalVisible,
         handleCarrito,
-        setModalVisible
+        setModalVisible,
       }}
     >
       {children}
